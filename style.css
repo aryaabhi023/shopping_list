@@ -1,118 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
-img{
-    width: 40px;
-    height: 55px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+img {
+  width: 40px;
+  height: 55px;
 }
 *,
 *::before,
-*::after{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 body {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    background-color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
 }
 header {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 header h1 {
-    font-weight: 300;
-    margin-left: 20px;
+  font-weight: 300;
+  margin-left: 20px;
 }
 .container {
-    max-width: 500px;
-    margin: 30px auto;
-    padding: 20px;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
 }
 .form-input {
-    width: 95%;
-    font-size: 18px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
+  width: 95%;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
 }
 
 .form-input-filter {
-   margin-top: 20px;
-   width: 92%;
-   font-size: 18px;
-   border:none;
-   margin-bottom: 20px;
-   padding: 10px;
-   border-bottom: 1px solid #ccc;
-   background: transparent;
-   outline: none;
+  margin-top: 20px;
+  width: 92%;
+  font-size: 18px;
+  border: none;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  outline: none;
 }
 .btn {
-    margin-left: 10px; ;
-    cursor: pointer;
-    padding: 10px 20px;
-    border: none;
-    background-color: #333;
-    color: #fff;
-    border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
 }
 .btn:hover {
-    background-color: #444;
+  background-color: #444;
 }
 .btn-link {
-    font-size: 16px;
-    background: transparent;
-    color: #333;
-    border: none;
-    padding: 0;
-    cursor: pointer;
+  font-size: 16px;
+  background: transparent;
+  color: #333;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 .btn-clear {
-    margin: 20px 10px 20px 30px;
-    background-color: transparent;
-    width: 92%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px 20px;
-    color: #333;
-    cursor: pointer;
-    font-size: 16px;
+  margin: 20px 10px 20px 30px;
+  background-color: transparent;
+  width: 92%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #333;
+  cursor: pointer;
+  font-size: 16px;
 }
 .btn-clear:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 .text-red {
-    color: red;
+  color: red;
 }
 
 .item {
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .item li {
-    display: flex;
-    justify-content: space-between;
-    width: 69%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 700;
-    margin: 0 5px 15px;
-    padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 69%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  margin: 0 5px 15px;
+  padding: 10px 15px;
+}
+#item-input:focus {
+  outline: 2px solid green;
 }
 @media (max-width: 500px) {
-    .items li {
-      width: 100%;
-    }
+  .items li {
+    width: 100%;
   }
-
+}
