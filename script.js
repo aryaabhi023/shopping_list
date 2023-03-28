@@ -90,13 +90,15 @@ function clearAll() {
 
 //function to change color when icon is clicked
 function imgEffect() {
-  if (document.body.style.backgroundColor !== "purple") {
-    document.body.style.backgroundColor = "purple";
-    document.body.style.color = "white";
-  } else {
-    document.body.style.backgroundColor = "#f5f5f5";
-    document.body.style.color = "";
-  }
+  const color = `#${Math.random().toString(16).slice(2).substr(0, 6)}`;
+  document.body.style.backgroundColor = color;
+  //   if (document.body.style.backgroundColor !== "purple") {
+  //     document.body.style.backgroundColor = "purple";
+  //     document.body.style.color = "white";
+  //   } else {
+  //     document.body.style.backgroundColor = "#f5f5f5";
+  //     document.body.style.color = "";
+  //   }
 }
 
 //adding effects function
@@ -105,6 +107,7 @@ function onFocus(e) {
   e.target.style.outlineColor = "green";
   e.target.style.outlineWidth = "2px";
 }
+
 function onBlur(e) {
   e.target.style.outlineStyle = "none";
 }
