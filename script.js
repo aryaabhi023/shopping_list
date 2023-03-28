@@ -79,12 +79,13 @@ function createIcon(classes) {
 //function to clear all item in item list
 function clearAll() {
   const list = document.querySelectorAll("li");
-  alert("Are you sure?");
-  list.forEach((item) => {
-    item.remove();
-  });
-  localStorage.clear();
-  checkUI();
+  if (confirm("Are you sure?")) {
+    list.forEach((item) => {
+      item.remove();
+    });
+    localStorage.clear();
+    checkUI();
+  }
 }
 
 //function to change color when icon is clicked
