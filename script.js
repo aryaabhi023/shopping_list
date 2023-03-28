@@ -145,7 +145,7 @@ function checkUI() {
 }
 
 //function to filter the items
-function OnInput() {
+function onInput() {
   const text = filter.value.toLowerCase();
   const items = itemList.querySelectorAll("li");
   items.forEach((item) => {
@@ -166,5 +166,5 @@ logo.addEventListener("click", imgEffect);
 itemList.addEventListener("click", onClick);
 // itemInput.addEventListener("focus", onfocus);
 itemInput.addEventListener("blur", onBlur);
-filter.addEventListener("input", OnInput);
+filter.addEventListener("input", onInput);
 document.addEventListener("DOMContentLoaded", displayItem);
