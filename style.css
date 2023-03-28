@@ -43,9 +43,7 @@ header h1 {
     border-radius: 5px;
     outline: none;
 }
-.checkbox{
-    margin-left: 10px;
-}
+
 .form-input-filter {
    margin-top: 20px;
    width: 92%;
@@ -98,6 +96,7 @@ header h1 {
 .item {
     margin: 20px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .item li {

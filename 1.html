@@ -12,7 +12,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css">
-    <title>My Shopping list</title>
+    <title>Shopping list</title>
 </head>
 <body>
     <div id="container">
@@ -29,16 +29,6 @@
                    placeholder="Enter Item"
                 />
             </div>
-            <select name="item" id="priority" class="form-input">
-                <option value="0">Select Priority</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-            </select>  
-            <div>
-                <input type="checkbox" class="checkbox">
-                Recurring item
-            </div>
             <div class="form-control">
                 <button type="submit" class="btn">
                    <i class="fas fa-plus">Add item</i>
@@ -54,30 +44,6 @@
             >
         </div>
         <ul id="item-list" class="item">
-            <li>
-                Apple
-                <button class="remove-item btn-link text-red">
-                    <i class="fas fa-xmark"></i>
-                </button>
-            </li>
-            <li>
-                Orange
-                <button class="remove-item btn-link text-red">
-                    <i class="fas fa-xmark"></i>
-                </button>
-            </li>
-            <li>
-                Banana
-                <button class="remove-item btn-link text-red">
-                    <i class="fas fa-xmark"></i>
-                </button>
-            </li>
-            <li>
-                Milk
-                <button class="remove-item btn-link text-red">
-                    <i class="fas fa-xmark"></i>
-                </button>
-            </li>
         </ul>
         <button class="btn-clear" id="clear">Clear All</button>
     </div>
