@@ -23,12 +23,17 @@ function addItemOnSubmit(e) {
     alert("write something");
     return;
   }
+  const newItem = itemInput.value;
   if (isEdit) {
     const itemToEdit = itemList.querySelector(".edit-mode");
     removeItem(itemToEdit);
     isEdit = false;
+  } else {
+    if (is_Exist(newItem)) {
+      alert("Item already exists");
+      return;
+    }
   }
-  const newItem = itemInput.value;
   addItemToDOM(newItem);
   addItemToLocalStorage(newItem);
   checkUI();
@@ -56,6 +61,12 @@ function addItemToLocalStorage(items) {
   }
   listArray.push(items);
   localStorage.setItem("item", JSON.stringify(listArray));
+}
+
+//function to check if item is already exist or not
+function is_Exist(item) {
+  const itemFromLocalStorage = getItemFromLocalStorage();
+  return itemFromLocalStorage.includes(item);
 }
 
 //function to get items from local Storage.
