@@ -4,6 +4,8 @@ const itemList = document.getElementById("item-list");
 const clearBtn = document.querySelector("#clear");
 const logo = document.querySelector("img");
 const filter = document.getElementById("filter");
+const formBtn = itemForm.querySelector("button");
+let isEdit = false;
 
 //function to accsess the item back from local storage on refresh and reload.
 function displayItem() {
@@ -20,6 +22,11 @@ function addItemOnSubmit(e) {
   if (itemInput.value == "") {
     alert("write something");
     return;
+  }
+  if (isEdit) {
+    const itemToEdit = itemList.querySelector(".edit-mode");
+    removeItem(itemToEdit);
+    isEdit = false;
   }
   const newItem = itemInput.value;
   addItemToDOM(newItem);
@@ -115,7 +122,21 @@ function onBlur(e) {
 function onClick(e) {
   if (e.target.parentElement.classList.contains("remove-item")) {
     removeItem(e.target.parentElement.parentElement);
+  } else {
+    setEditMode(e.target);
   }
+}
+
+//Adding Edit mode
+function setEditMode(item) {
+  isEdit = true;
+  itemList
+    .querySelectorAll("li")
+    .forEach((i) => i.classList.remove("edit-mode"));
+  item.classList.add("edit-mode");
+  formBtn.innerHTML = '<i class="fas fa-pen"></i>Update item';
+  formBtn.style.backgroundColor = "#228B22";
+  itemInput.value = item.textContent;
 }
 
 //function to remove item
@@ -142,6 +163,9 @@ function checkUI() {
     filter.style.display = "block";
     clearBtn.style.display = "block";
   }
+
+  formBtn.innerHTML = '<i class="fas fa-plus">Add item</i>';
+  formBtn.style.backgroundColor = "#333";
 }
 
 //function to filter the items

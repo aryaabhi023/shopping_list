@@ -110,6 +110,9 @@ header h1 {
   margin: 0 5px 15px;
   padding: 10px 15px;
 }
+.edit-mode {
+  color: #cfcfcf;
+}
 #item-input:focus {
   outline: 2px solid green;
 }
